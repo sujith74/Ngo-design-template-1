@@ -75,9 +75,8 @@ const JoyfulMindsWebsite = () => {
     Home: "/",
     About: "https://about-us-two-indol.vercel.app/",
     Causes: "#causes",
-    Events: "#events",
+    Report: "#report",
     Pages: "#pages",
-    Blog: "#blog",
     Contact: "#contact"
   };
 
@@ -688,7 +687,7 @@ const JoyfulMindsWebsite = () => {
                   Quick Links
                 </Typography>
                 <ul className="space-y-3">
-                  {['Home', 'About Us', 'Causes', 'Events', 'Blog', 'Contact'].map((item) => (
+                  {['Home', 'About Us', 'Causes','Report','LogIn', 'Contact'].map((item) => (
                     <li key={item}>
                       <motion.a 
                         href="#" 
