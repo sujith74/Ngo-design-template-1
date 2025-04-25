@@ -160,18 +160,18 @@ const JoyfulMindsWebsite = () => {
     <div className="flex flex-col min-h-screen bg-white">
       {/* Top Bar */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-2 text-xs sm:text-sm">
-  <Container maxWidth="xl" className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0 px-4">
+  <Container maxWidth="xl" className="!flex flex-col sm:!flex-row justify-between items-center gap-2 sm:!gap-0 px-4">
     <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 w-full sm:w-auto justify-between sm:justify-start">
       <motion.div 
         whileHover={{ scale: 1.05 }} 
-        className="flex items-center whitespace-nowrap"
+        className="flex items-center whitespace-nowrap min-w-max"
       >
         <Email className="text-amber-400 mr-1 sm:mr-2" fontSize="small" />
         <span>help@joyfulminds.com</span>
       </motion.div>
       <motion.div 
         whileHover={{ scale: 1.05 }} 
-        className="flex items-center whitespace-nowrap"
+        className="flex items-center whitespace-nowrap min-w-max"
       >
         <Phone className="text-amber-400 mr-1 sm:mr-2" fontSize="small" />
         <span>+1 800 785 6748</span>
@@ -180,13 +180,13 @@ const JoyfulMindsWebsite = () => {
     <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 w-full sm:w-auto justify-between sm:justify-start">
       <motion.a 
         href="#" 
-        className="hover:text-amber-400 flex items-center whitespace-nowrap"
+        className="hover:text-amber-400 flex items-center whitespace-nowrap min-w-max"
         whileHover={{ y: -2 }}
       >
         <Favorite className="mr-1" fontSize="small" />
-        My Account
+        <span>My Account</span>
       </motion.a>
-      <motion.div whileHover={{ scale: 1.05 }} className="w-full sm:w-auto">
+      <motion.div whileHover={{ scale: 1.05 }} className="w-full sm:w-auto min-w-[100px]">
         <Button 
           variant="contained" 
           className="bg-amber-400 hover:bg-amber-500 text-gray-900 px-3 sm:px-4 py-0.5 sm:py-1 rounded-full font-bold shadow-md text-xs sm:text-sm w-full sm:w-auto"
