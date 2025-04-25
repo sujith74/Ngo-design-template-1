@@ -71,6 +71,15 @@ const JoyfulMindsWebsite = () => {
   //     }
   //   }
   // };
+  const navLinks = {
+    Home: "/",
+    About: "https://about-us-two-indol.vercel.app/",
+    Causes: "#causes",
+    Events: "#events",
+    Pages: "#pages",
+    Blog: "#blog",
+    Contact: "#contact"
+  };
 
   const features = [
     {
@@ -150,39 +159,45 @@ const JoyfulMindsWebsite = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-2 text-sm">
-        <Container maxWidth="xl" className="flex justify-between items-center">
-          <div className="flex space-x-6">
-            <motion.div whileHover={{ scale: 1.05 }} className="flex items-center">
-              <Email className="text-amber-400 mr-2" fontSize="small" />
-              <span>help@joyfulminds.com</span>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} className="flex items-center">
-              <Phone className="text-amber-400 mr-2" fontSize="small" />
-              <span>+1 800 785 6748</span>
-            </motion.div>
-          </div>
-          <div className="flex space-x-6">
-            <motion.a 
-              href="#" 
-              className="hover:text-amber-400 flex items-center"
-              whileHover={{ y: -2 }}
-            >
-              <Favorite className="mr-1" fontSize="small" />
-              My Account
-            </motion.a>
-            <motion.div whileHover={{ scale: 1.05 }}>
-              <Button 
-                variant="contained" 
-                className="bg-amber-400 hover:bg-amber-500 text-gray-900 px-4 py-1 rounded-full font-bold shadow-md"
-              >
-                Register
-              </Button>
-            </motion.div>
-          </div>
-        </Container>
-      </div>
-
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-2 text-xs sm:text-sm">
+  <Container maxWidth="xl" className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0 px-4">
+    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 w-full sm:w-auto justify-between sm:justify-start">
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center whitespace-nowrap"
+      >
+        <Email className="text-amber-400 mr-1 sm:mr-2" fontSize="small" />
+        <span>help@joyfulminds.com</span>
+      </motion.div>
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center whitespace-nowrap"
+      >
+        <Phone className="text-amber-400 mr-1 sm:mr-2" fontSize="small" />
+        <span>+1 800 785 6748</span>
+      </motion.div>
+    </div>
+    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 w-full sm:w-auto justify-between sm:justify-start">
+      <motion.a 
+        href="#" 
+        className="hover:text-amber-400 flex items-center whitespace-nowrap"
+        whileHover={{ y: -2 }}
+      >
+        <Favorite className="mr-1" fontSize="small" />
+        My Account
+      </motion.a>
+      <motion.div whileHover={{ scale: 1.05 }} className="w-full sm:w-auto">
+        <Button 
+          variant="contained" 
+          className="bg-amber-400 hover:bg-amber-500 text-gray-900 px-3 sm:px-4 py-0.5 sm:py-1 rounded-full font-bold shadow-md text-xs sm:text-sm w-full sm:w-auto"
+          size="small"
+        >
+          Register
+        </Button>
+      </motion.div>
+    </div>
+  </Container>
+</div>
       {/* Main Header */}
       <motion.header 
         initial={{ opacity: 0, y: -20 }}
@@ -202,18 +217,20 @@ const JoyfulMindsWebsite = () => {
           </motion.div>
           
           <nav className="hidden lg:flex space-x-8">
-            {['Home', 'About', 'Causes', 'Events', 'Pages', 'Blog', 'Contact'].map((item) => (
-              <motion.a 
-                key={item}
-                href="#"
-                className="text-gray-800 hover:text-amber-500 font-medium relative group"
-                whileHover={{ y: -2 }}
-              >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
-              </motion.a>
-            ))}
-          </nav>
+  {Object.entries(navLinks).map(([label, link]) => (
+    <motion.a
+      key={label}
+      href={link}
+      className="text-gray-800 hover:text-amber-500 font-medium relative group"
+      whileHover={{ y: -2 }}
+      target={link.startsWith("http") ? "_blank" : "_self"} // opens external links in new tab
+      rel={link.startsWith("http") ? "noopener noreferrer" : ""}
+    >
+      {label}
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
+    </motion.a>
+  ))}
+</nav>
           
           <motion.div 
             whileHover={{ scale: 1.05 }}
@@ -547,13 +564,15 @@ const JoyfulMindsWebsite = () => {
   </div>
 
   <div className="mt-auto">
-    <Button 
-      variant="contained" 
-      className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 w-full py-3 rounded-full shadow-md"
-      size="large"
-    >
-      Donate Now
-    </Button>
+  
+<Button 
+  variant="contained" 
+  className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 w-full py-3 rounded-full shadow-md"
+  size="large"
+  onClick={() => window.location.href = 'https://campaign-template-2.vercel.app/'}
+>
+  Donate Now
+</Button>
   </div>
 </CardContent>
 
