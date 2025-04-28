@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Button, Container, Typography, Grid, CardContent, IconButton,  Divider, } from '@mui/material';
+import { Button, Container, Typography, Grid, IconButton,  Divider, } from '@mui/material';
 import {  People, Handshake, MonetizationOn, ArrowForward, Facebook, Twitter, LinkedIn, YouTube, Instagram, Favorite, VolunteerActivism, LocationOn, Email, Phone,  ArrowBack, ArrowForwardIos } from '@mui/icons-material';
 import { RecentCausesSection } from './components/RecentCausesSection';
 const JoyfulMindsWebsite = () => {
