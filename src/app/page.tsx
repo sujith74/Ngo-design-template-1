@@ -29,7 +29,7 @@ export default function AboutUs() {
                 MISSION & VALUES • COMMUNITY FIRST
               </Typography>
               <Typography variant="h2" component="h1" className="font-bold mb-4 text-4xl md:text-5xl">
-                Empowering Every <br />Child's Potential
+                Empowering Every <br />Child&apos;s Potential
               </Typography>
               <Typography variant="body1" className="mb-6 text-amber-50">
                 At Joyful Minds, we believe in the unique potential of every child. Our mission is to help them shine through personalized support, education, and compassionate care.
@@ -141,7 +141,7 @@ export default function AboutUs() {
             At Joyful Minds, we firmly believe that positive change requires collective efforts. We sincerely invite you to join hands with us in nurturing young minds and shaping the future of our world. Your support, in any capacity, will make a significant difference. Whether you choose to volunteer your time, raise awareness about our initiatives, or contribute to our projects, your involvement will impact the lives of countless children. Together, we create a world where every child has the opportunity to live, learn, pursue their dreams, and above all, find happiness!
           </Typography>
           <Typography variant="body1" className="mb-6 text-gray-700">
-            Get in Touch: If you have any questions or suggestions for our cause, then please feel free to get in touch with us. Visit the "Contact Us" page on our website to find the necessary information.
+            Get in Touch: If you have any questions or suggestions for our cause, then please feel free to get in touch with us. Visit the &quot;Contact Us&quot; page on our website to find the necessary information.
           </Typography>
         </Paper>
         
@@ -255,7 +255,7 @@ export default function AboutUs() {
           <Card className="mb-4">
             <CardContent className="p-6">
               <Typography variant="body1" className="italic mb-4">
-                "Joyful Minds is doing a fantastic job in the field of education, our school children get to know so many things during this program."
+              &quot;Joyful Minds is doing a fantastic job in the field of education, our school children get to know so many things during this program.&quot;
               </Typography>
               <Box className="flex items-center">
                 <Box className="mr-3">
