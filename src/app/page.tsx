@@ -52,7 +52,7 @@ export default function AboutUs() {
             <div className="md:w-1/2 mt-8 md:mt-0">
               <Box className="relative h-64 md:h-80">
                 <Image 
-                  src="https://children-charity.cmsmasters.net/wp-content/uploads/2017/05/children.png" 
+                  src="https://cdn.pixabay.com/photo/2022/04/06/13/58/woman-7115624_1280.jpg" 
                   alt="Children learning" 
                   layout="fill"
                   objectFit="cover"
@@ -233,16 +233,16 @@ export default function AboutUs() {
           </Typography>
           <Grid container spacing={4} justifyContent="center" alignItems="center">
             <Grid item xs={6} sm={3} md={2} className="flex justify-center">
-              <Image src="/api/placeholder/120/60" alt="Channel NewsAsia" width={120} height={60} />
+              <Image src="https://cdn.pixabay.com/photo/2015/02/04/11/29/tissue-623649_1280.jpg" alt="Channel NewsAsia" width={120} height={60} />
             </Grid>
             <Grid item xs={6} sm={3} md={2} className="flex justify-center">
-              <Image src="/api/placeholder/120/60" alt="The Straits Times" width={120} height={60} />
+              <Image src="https://cdn.pixabay.com/photo/2012/10/10/04/46/oldtimer-60521_1280.jpg" alt="The Straits Times" width={120} height={60} />
             </Grid>
             <Grid item xs={6} sm={3} md={2} className="flex justify-center">
-              <Image src="/api/placeholder/120/60" alt="Asia One" width={120} height={60} />
+              <Image src="https://cdn.pixabay.com/photo/2018/04/23/21/26/auto-3345601_1280.jpg" alt="Asia One" width={120} height={60} />
             </Grid>
             <Grid item xs={6} sm={3} md={2} className="flex justify-center">
-              <Image src="/api/placeholder/120/60" alt="Today" width={120} height={60} />
+              <Image src="https://cdn.pixabay.com/photo/2017/06/08/23/00/apple-2385198_1280.jpg" alt="Today" width={120} height={60} />
             </Grid>
           </Grid>
         </Box>
@@ -260,7 +260,7 @@ export default function AboutUs() {
               <Box className="flex items-center">
                 <Box className="mr-3">
                   <Image 
-                    src="/api/placeholder/40/40" 
+                    src="https://cdn.pixabay.com/photo/2017/03/27/13/28/man-2178721_1280.jpg" 
                     alt="Aditya Birla" 
                     width={40} 
                     height={40} 
@@ -287,16 +287,16 @@ export default function AboutUs() {
           </Typography>
           <Grid container spacing={4} justifyContent="center" alignItems="center">
             <Grid item xs={6} sm={3} className="flex justify-center">
-              <Image src="/api/placeholder/140/80" alt="Stonehill" width={140} height={80} />
+              <Image src="https://cdn.pixabay.com/photo/2016/03/17/07/02/starbucks-1262392_1280.jpg" alt="Stonehill" width={140} height={80} />
             </Grid>
             <Grid item xs={6} sm={3} className="flex justify-center">
-              <Image src="/api/placeholder/140/80" alt="Partner 2" width={140} height={80} />
+              <Image src="https://cdn.pixabay.com/photo/2012/12/11/21/28/great-69521_1280.jpg" alt="Partner 2" width={140} height={80} />
             </Grid>
             <Grid item xs={6} sm={3} className="flex justify-center">
-              <Image src="/api/placeholder/140/80" alt="Shriram" width={140} height={80} />
+              <Image src="https://cdn.pixabay.com/photo/2015/07/21/06/59/nikon-853641_1280.jpg" alt="Shriram" width={140} height={80} />
             </Grid>
             <Grid item xs={6} sm={3} className="flex justify-center">
-              <Image src="/api/placeholder/140/80" alt="Partner 4" width={140} height={80} />
+              <Image src="https://cdn.pixabay.com/photo/2020/09/05/16/01/butterfly-5546907_1280.jpg" alt="Partner 4" width={140} height={80} />
             </Grid>
           </Grid>
         </Box>
