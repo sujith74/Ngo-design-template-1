@@ -14,7 +14,21 @@ const JoyfulMindsWebsite = () => {
 
   // const currencies = ['USD', 'INR', 'EUR', 'GBP'];
 
-  
+  const palettes = {
+    primary: {
+      light: "#4C9F38",
+      main: "#4C9F38",
+      dark: "#4C9F38",
+      contrastText: "#fff"
+    },
+    secondary: {
+      light: "#eecd5e",
+      main: "#E9BD29",
+      dark: "#d5a916",
+      contrastText: "#000"
+    }
+  };
+
   const slides = [
     {
       bgImage: "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')",
@@ -235,13 +249,25 @@ const JoyfulMindsWebsite = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button 
-              variant="contained" 
-              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-6 py-2 rounded-full shadow-lg"
-              startIcon={<Favorite />}
-            >
-              Donate Now
-            </Button>
+           <Button
+  variant="contained"
+  style={{
+    background: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    color: palettes.secondary.contrastText,
+    borderRadius: '9999px', // rounded-full effect
+  }}
+  className="px-6 py-2 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+  startIcon={<Favorite />}
+  onMouseEnter={(e) => {
+    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+  }}
+>
+  Donate Now
+</Button>
+
           </motion.div>
         </Container>
       </motion.header>
@@ -328,13 +354,25 @@ const JoyfulMindsWebsite = () => {
                 transition={{ delay: 0.8 }}
                 className="flex flex-wrap gap-4"
               >
-                <Button 
-                  variant="contained" 
-                  className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-4 rounded-full shadow-lg text-lg transform hover:scale-105 transition-transform"
-                  size="large"
-                >
-                  Make Donation
-                </Button>
+               <Button
+  variant="contained"
+  style={{
+    background: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    color: palettes.secondary.contrastText,
+    borderRadius: '9999px', // for rounded-full effect
+  }}
+  className="px-8 py-4 text-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl"
+  size="large"
+  onMouseEnter={(e) => {
+    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+  }}
+>
+  Make Donation
+</Button>
+
                 <Button 
                   variant="outlined" 
                   className="border-2 border-amber-500 text-amber-500 hover:bg-amber-50 px-8 py-4 rounded-full text-lg transform hover:scale-105 transition-transform"
@@ -503,13 +541,25 @@ const JoyfulMindsWebsite = () => {
               </Typography>
             </motion.div>
             <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-4">
-              <Button 
-                variant="contained" 
-                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full shadow-lg text-lg"
-                size="large"
-              >
-                Donate Now
-              </Button>
+            <Button
+  variant="contained"
+  style={{
+    background: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    color: palettes.secondary.contrastText,
+    borderRadius: '9999px', // rounded-full effect
+  }}
+  className="px-8 py-4 shadow-lg text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+  size="large"
+  onMouseEnter={(e) => {
+    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+  }}
+>
+  Donate Now
+</Button>
+
               <Button 
                 variant="outlined" 
                 className="border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg"

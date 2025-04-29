@@ -14,6 +14,20 @@ const staggerContainer = {
     }
   }
 };
+const palettes = {
+  primary: {
+    light: "#4C9F38",
+    main: "#4C9F38",
+    dark: "#4C9F38",
+    contrastText: "#fff"
+  },
+  secondary: {
+    light: "#eecd5e",
+    main: "#E9BD29",
+    dark: "#d5a916",
+    contrastText: "#000"
+  }
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -159,14 +173,29 @@ export function RecentCausesSection() {
                 </div>
 
                 <div className="mt-auto">
-                  <Button 
-                    variant="contained" 
-                    className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 w-full py-3 rounded-full shadow-md"
-                    size="large"
-                    onClick={() => window.location.href = 'https://campaign-template-2.vercel.app/'}
-                  >
-                    Donate Now
-                  </Button>
+                  
+<Button
+  variant="contained"
+  style={{
+    backgroundImage: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    color: palettes.secondary.contrastText,
+    width: '100%',
+    paddingTop: '0.75rem',
+    paddingBottom: '0.75rem',
+    borderRadius: '9999px', // Tailwind's rounded-full
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundImage = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundImage = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+  }}
+  size="large"
+  onClick={() => window.location.href = 'https://campaign-template-2.vercel.app/'}
+>
+  Donate Now
+</Button>
                 </div>
               </CardContent>
             </motion.div>
