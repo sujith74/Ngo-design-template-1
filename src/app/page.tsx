@@ -363,11 +363,11 @@ const JoyfulMindsWebsite = () => {
   }}
   className="px-8 py-4 text-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl"
   size="large"
-  onMouseEnter={(e) => {
-    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+   onMouseEnter={(e) => {
+    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
   }}
   onMouseLeave={(e) => {
-    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
   }}
 >
   Make Donation
