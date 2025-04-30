@@ -259,10 +259,10 @@ const JoyfulMindsWebsite = () => {
   className="px-6 py-2 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
   startIcon={<Favorite />}
   onMouseEnter={(e) => {
-    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
   }}
   onMouseLeave={(e) => {
-    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
   }}
 >
   Donate Now
@@ -551,10 +551,10 @@ const JoyfulMindsWebsite = () => {
   className="px-8 py-4 shadow-lg text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
   size="large"
   onMouseEnter={(e) => {
-    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
   }}
   onMouseLeave={(e) => {
-    e.target.style.background = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
   }}
 >
   Donate Now
