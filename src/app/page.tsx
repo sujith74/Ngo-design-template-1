@@ -252,7 +252,7 @@ const JoyfulMindsWebsite = () => {
            <Button
   variant="contained"
   style={{
-    background: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    background: `${palettes.secondary.main}`,
     color: palettes.secondary.contrastText,
     borderRadius: '9999px', // rounded-full effect
   }}
@@ -357,7 +357,7 @@ const JoyfulMindsWebsite = () => {
                <Button
   variant="contained"
   style={{
-    background: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    background: `${palettes.secondary.main}`,
     color: palettes.secondary.contrastText,
     borderRadius: '9999px', // for rounded-full effect
   }}
@@ -544,7 +544,7 @@ const JoyfulMindsWebsite = () => {
             <Button
   variant="contained"
   style={{
-    background: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
+    background: `${palettes.secondary.main}`,
     color: palettes.secondary.contrastText,
     borderRadius: '9999px', // rounded-full effect
   }}
