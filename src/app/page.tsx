@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Button, Container, Typography, Grid, IconButton,  Divider, } from '@mui/material';
 import {  People, Handshake, MonetizationOn, ArrowForward, Facebook, Twitter, LinkedIn, YouTube, Instagram, Favorite, VolunteerActivism, LocationOn, Email, Phone,  ArrowBack, ArrowForwardIos } from '@mui/icons-material';
 import { RecentCausesSection } from './components/RecentCausesSection';
+// import { ContactUs } from './components/ContactUs'
 const JoyfulMindsWebsite = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -91,7 +92,7 @@ const JoyfulMindsWebsite = () => {
     Causes: "#causes",
     Report: "#report",
     Pages: "#pages",
-    Contact: "#contact"
+    Contact: "/contact"
   };
 
   const features = [
