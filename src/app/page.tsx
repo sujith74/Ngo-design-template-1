@@ -24,7 +24,7 @@ const JoyfulMindsWebsite = () => {
     },
     secondary: {
       light: "#eecd5e",
-      main: "#E9BD29",
+      main: "#F7AA28",
       dark: "#d5a916",
       contrastText: "#000"
     }
@@ -203,7 +203,7 @@ const JoyfulMindsWebsite = () => {
       <motion.div whileHover={{ scale: 1.05 }} className="w-full sm:w-auto min-w-[100px]">
         <Button 
           variant="contained" 
-          className="bg-amber-400 hover:bg-amber-500 text-gray-900 px-3 sm:px-4 py-0.5 sm:py-1 rounded-full font-bold shadow-md text-xs sm:text-sm w-full sm:w-auto"
+          className="bg-amber-400 hover:bg-amber-500 text-white px-3 sm:px-4 py-0.5 sm:py-1 rounded-full font-bold shadow-md text-xs sm:text-sm w-full sm:w-auto"
           size="small"
         >
           Register
@@ -253,18 +253,18 @@ const JoyfulMindsWebsite = () => {
            <Button
   variant="contained"
   style={{
-    background: `${palettes.secondary.main}`,
-    color: palettes.secondary.contrastText,
+    background:' #363636',
+    color: '#fff',
     borderRadius: '9999px', // rounded-full effect
   }}
   className="px-6 py-2 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
   startIcon={<Favorite />}
-  onMouseEnter={(e) => {
-    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
-  }}
-  onMouseLeave={(e) => {
-    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
-  }}
+  // onMouseEnter={(e) => {
+  //   (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  // }}
+  // onMouseLeave={(e) => {
+  //   (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
+  // }}
 >
   Donate Now
 </Button>
@@ -358,18 +358,19 @@ const JoyfulMindsWebsite = () => {
                <Button
   variant="contained"
   style={{
-    background: `${palettes.secondary.main}`,
-    color: palettes.secondary.contrastText,
+    background:' #363636',
+    color: '#fff',
     borderRadius: '9999px', // for rounded-full effect
+
   }}
-  className="px-8 py-4 text-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl"
+  className="px-8 py-4 text-lg  shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl hover:bg-amber-500"
   size="large"
-   onMouseEnter={(e) => {
-    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
-  }}
-  onMouseLeave={(e) => {
-    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
-  }}
+  //  onMouseEnter={(e) => {
+  //   (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  // }}
+  // onMouseLeave={(e) => {
+  //   (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
+  // }}
 >
   Make Donation
 </Button>
@@ -428,7 +429,7 @@ const JoyfulMindsWebsite = () => {
     </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white" >
   <Container maxWidth="xl">
     <Grid container spacing={4} justifyContent="center">
       {[
@@ -445,7 +446,7 @@ const JoyfulMindsWebsite = () => {
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="text-center p-6 rounded-xl  hover:scale-105 transition-all duration-300 ease-in-out"
           >
-            <Typography variant="h2" className="!font-bold text-amber-400 !mb-2">
+            <Typography variant="h2" className="!font-bold  !mb-2" sx={{color:palettes.secondary.main}}>
               {stat.value}
             </Typography>
             <Typography variant="h6" className="!font-medium text-white">
@@ -470,7 +471,7 @@ const JoyfulMindsWebsite = () => {
     >
       <motion.div variants={fadeInUp}>
         <Typography variant="h4" className="!font-bold !mb-4 text-gray-700">
-          How You Can <span className="text-amber-500">Help</span>
+          How You Can <span style={{color:palettes.secondary.main}}>Help</span>
         </Typography>
       </motion.div>
       <motion.div variants={fadeInUp}>
@@ -488,10 +489,10 @@ const JoyfulMindsWebsite = () => {
           whileInView="visible"
           variants={fadeInUp}
           viewport={{ once: true }}
-          whileHover={{ y: -6 }}
+          // whileHover={{ y: -6 }}
           className="px-3"
         >
-          <div className="bg-gray-50 px-4 py-4 text-gray-700 rounded-xl h-full flex flex-col items-center text-center border border-gray-200 hover:border-amber-300 transition-all shadow hover:shadow-md">
+          <div className="bg-gray-50 px-4 py-4 text-gray-700 rounded-xl h-full flex flex-col items-center text-center border border-gray-200 hover:border-amber-200 transition-all shadow hover:shadow-md">
             <div className="bg-amber-100/60 w-14 h-14 rounded-full flex items-center justify-center mb-3 border border-amber-200">
               {feature.icon}
             </div>
@@ -533,7 +534,7 @@ const JoyfulMindsWebsite = () => {
           >
             <motion.div variants={fadeInUp}>
               <Typography variant="h3" className="!font-bold !mb-6">
-                Ready to Make a <span className="text-amber-400">Difference</span>?
+                Ready to Make a <span className="" style={{color:palettes.secondary.main}}>Difference</span>?
               </Typography>
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -545,18 +546,19 @@ const JoyfulMindsWebsite = () => {
             <Button
   variant="contained"
   style={{
-    background: `${palettes.secondary.main}`,
-    color: palettes.secondary.contrastText,
+     background:' #363636',
+    color: '#fff',
     borderRadius: '9999px', // rounded-full effect
+    
   }}
   className="px-8 py-4 shadow-lg text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
   size="large"
-  onMouseEnter={(e) => {
-    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
-  }}
-  onMouseLeave={(e) => {
-    (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
-  }}
+  // onMouseEnter={(e) => {
+  //   (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  // }}
+  // onMouseLeave={(e) => {
+  //   (e.target as HTMLButtonElement).style.background = `linear-gradient(to right, ${palettes.secondary.dark}, ${palettes.secondary.main})`;
+  // }}
 >
   Donate Now
 </Button>

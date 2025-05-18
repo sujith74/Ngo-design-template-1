@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Container, Typography, Button, CardContent } from '@mui/material';
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 
 // Animation variants
 const staggerContainer = {
@@ -23,7 +23,7 @@ const palettes = {
   },
   secondary: {
     light: "#eecd5e",
-    main: "#E9BD29",
+    main: "#F7AA28",
     dark: "#d5a916",
     contrastText: "#000"
   }
@@ -117,7 +117,7 @@ export function RecentCausesSection() {
         >
           <motion.div variants={fadeInUp}>
             <Typography variant="h4" className="!font-bold !mb-4 text-gray-700">
-              Recent <span className="text-amber-500">Causes</span>
+              Recent <span className="" style={{color:palettes.secondary.main}}>Causes</span>
             </Typography>
           </motion.div>
           <motion.div variants={fadeInUp}>
@@ -166,8 +166,9 @@ export function RecentCausesSection() {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div 
-                      className="bg-gradient-to-r from-amber-400 to-amber-600 h-2.5 rounded-full" 
-                      style={{ width: `${Math.min(100, (cause.raised / cause.goal) * 100)}%` }}
+                      className=" h-2.5 rounded-full" 
+                      style={{ width: `${Math.min(100, (cause.raised / cause.goal) * 100)}%`,backgroundColor:palettes.secondary.main }}
+                      
                     ></div>
                   </div>
                 </div>
@@ -177,20 +178,21 @@ export function RecentCausesSection() {
 <Button
   variant="contained"
   style={{
-    backgroundImage: `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`,
-    color: palettes.secondary.contrastText,
+    backgroundImage:  palettes.secondary.main,
+ background:' #363636',
+     color: '#fff',
     width: '100%',
     paddingTop: '0.75rem',
     paddingBottom: '0.75rem',
     borderRadius: '9999px', // Tailwind's rounded-full
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
   }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundImage = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundImage = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
-  }}
+  // onMouseEnter={(e) => {
+  //   e.currentTarget.style.backgroundImage = `linear-gradient(to right, ${palettes.secondary.main}, ${palettes.secondary.dark})`;
+  // }}
+  // onMouseLeave={(e) => {
+  //   e.currentTarget.style.backgroundImage = `linear-gradient(to right, ${palettes.secondary.light}, ${palettes.secondary.main})`;
+  // }}
   size="large"
   onClick={() => window.location.href = 'https://campaign-template-2.vercel.app/'}
 >
@@ -212,8 +214,9 @@ export function RecentCausesSection() {
             >
               <Button
                 variant="text"
-                className="!text-amber-600 !hover:underline !font-semibold !text-lg inline-flex items-center gap-1"
+                className=" !hover:underline !font-semibold !text-lg inline-flex items-center gap-1"
                 onClick={handleSeeMore}
+                sx={{color: palettes.secondary.main}}
               >
                 See more
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
